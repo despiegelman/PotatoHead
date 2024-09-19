@@ -1,6 +1,5 @@
 public class PotatoHead
 { 
-
     //instance variables - to be used in all methods in the class 
     private int numberOfHats; //private int length; 
     private boolean glasses;
@@ -8,11 +7,9 @@ public class PotatoHead
     private String shapeOfNose;
     private boolean mustache;
     /*************************************************************************/ 
-
     //constructors 
     //default constructor 
-    public PotatoHead() 
-    { 
+    public PotatoHead() { 
         numberOfHats = 2;
         glasses = true;
         colorOfNose = "red";
@@ -21,78 +18,66 @@ public class PotatoHead
     }
     //give initial values to all the instance variables that are declared as private } 
     //initializer/ parameterized constructor 
-    public PotatoHead(int n, boolean g, String c, String s, boolean m) 
-    { 
+    public PotatoHead(int n, boolean g, String c, String s, boolean m) { 
         //set instance variables to parameter values
         numberOfHats = n;
         glasses = g;
         colorOfNose = c;
         shapeOfNose = s;
         mustache = m;
-
     } 
     /******************************************************/ 
-
     //Accessor Methods 
-    public int getnumberOfHats() 
-    { 
+    public int getnumberOfHats() { 
         return numberOfHats; 
     } 
-
-    public boolean getglasses() 
-    { 
+    public boolean getglasses() { 
         return glasses; 
     } 
-    public String getcolorOfNose() 
-    { 
+    public String getcolorOfNose() { 
         return colorOfNose; 
     } 
-    public String getshapeOfNose() 
-    { 
+    public String getshapeOfNose() { 
         return shapeOfNose; 
     } 
-    public boolean getmustache() 
-    { 
+    public boolean getmustache() { 
         return mustache; 
     } 
-
     /**********************************************************************/ 
-
     //mutator methods 
-    public void setnumberOfHats(int n) 
-    { 
+    public void setnumberOfHats(int n) { 
         numberOfHats = n; 
     }       
-    public void setglasses(boolean g) 
-    { 
+    public void setglasses(boolean g) { 
         glasses = g; 
     }  
-    public void setcolorOfNose(String c) 
-    { 
+    public void setcolorOfNose(String c) { 
         colorOfNose = c; 
     } 
-    public void setshapeOfNose(String s) 
-    { 
+    public void setshapeOfNose(String s) { 
         shapeOfNose = s; 
     } 
-    public void setmustache(boolean m) 
-    { 
+    public void setmustache(boolean m) { 
         mustache = m; 
     } 
     /********************************************************************/ 
-
     //Other methods 
+    public void talk(){
+        System.out.println("Superb");
+    }
+    public String drinkTea(int x, int y){
+        return "He has now drunk " + (x+y) + " cups of tea";
+    }
+    public int addHats(int hats){
+        return hats + 1;
+    }
     /*****************************************************/
-
-
     //toString 
-    public String toString() 
-    { 
+    public String toString() { 
         return "The number of hats is " + numberOfHats; 
     } 
     /*****************************************************/ //main method 
-    public static void main (String [] args) 
-    { 
+    public static void main (String [] args) { 
         //create objects or instances
         PotatoHead charles = new PotatoHead();
         //call or access constructors
@@ -109,5 +94,8 @@ public class PotatoHead
         String wallaceNose = wallace.getcolorOfNose() + " " + wallace.getshapeOfNose();
         System.out.println(charlesHats + "," + charlesGlasses + "," + wallaceHats + "," + wallaceGlasses + "," + wallaceNose);
         System.out.println(wallace.toString());
+        charles.talk();
+        System.out.println(wallace.drinkTea(5, 7));
+        System.out.print("Charles has " + charles.addHats(charles.getnumberOfHats()) + " hats now");
     }
 }
